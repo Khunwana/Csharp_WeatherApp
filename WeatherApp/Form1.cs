@@ -39,7 +39,7 @@ namespace WeatherApp
                 picIcon.ImageLocation = string.Format("https://api.openweathermap.org/img/w/{0}.png",Info.weather[0].icon);
 
                 //fetching the condition
-                labCondition.Text = Info.weather[0].main;
+                labTempararue.Text = Info.main.temp.ToString();
 
                 //fetching the details
                 labDetails.Text = Info.weather[0].description;
@@ -82,9 +82,9 @@ namespace WeatherApp
                 labConD2.Text = forecast_info.list[1].weather[0].main.ToString();
                 labConD3.Text = forecast_info.list[2].weather[0].main.ToString();
 
-                labTempD1.Text = forecast_info.list[0].main.temp.ToString();
-                labTempD2.Text = forecast_info.list[1].main.temp.ToString();
-                labTempD3.Text = forecast_info.list[2].main.temp.ToString();
+                labTempD1.Text = KelvinValueCOnversion(forecast_info.list[0].main.temp).ToString();
+                labTempD2.Text = KelvinValueCOnversion(forecast_info.list[1].main.temp).ToString();
+                labTempD3.Text = KelvinValueCOnversion(forecast_info.list[2].main.temp).ToString();
                 ///picIcon.ImageLocation = string.Format("https://api.openweathermap.org/img/w/{0}.png",Info.weather[0].icon);
 
                 picIcon_for1.ImageLocation = string.Format("https://api.openweathermap.org/img/w/{0}.png", forecast_info.list[0].weather[0].icon);
@@ -103,6 +103,15 @@ namespace WeatherApp
             return day;
         }
 
-        
+        double KelvinValueCOnversion(double kel)
+        {
+            double kelvinValue =kel - 273.15;
+            return kelvinValue;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
