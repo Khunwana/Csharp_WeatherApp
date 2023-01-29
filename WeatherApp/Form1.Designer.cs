@@ -37,7 +37,6 @@ namespace WeatherApp
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.picIcon = new System.Windows.Forms.PictureBox();
-            this.City = new System.Windows.Forms.Label();
             this.labDate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,11 +74,13 @@ namespace WeatherApp
             // 
             // TBCity
             // 
-            this.TBCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TBCity.Location = new System.Drawing.Point(674, 38);
+            this.TBCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TBCity.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.TBCity.Location = new System.Drawing.Point(597, 38);
             this.TBCity.Name = "TBCity";
-            this.TBCity.Size = new System.Drawing.Size(215, 26);
+            this.TBCity.Size = new System.Drawing.Size(292, 30);
             this.TBCity.TabIndex = 1;
+            this.TBCity.Text = "Location";
             // 
             // btnSearch
             // 
@@ -89,7 +90,7 @@ namespace WeatherApp
             this.btnSearch.ForeColor = System.Drawing.Color.Transparent;
             this.btnSearch.Location = new System.Drawing.Point(895, 38);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 25);
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "SEARCH";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -152,18 +153,6 @@ namespace WeatherApp
             this.picIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picIcon.TabIndex = 13;
             this.picIcon.TabStop = false;
-            // 
-            // City
-            // 
-            this.City.AutoSize = true;
-            this.City.BackColor = System.Drawing.Color.Transparent;
-            this.City.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.City.ForeColor = System.Drawing.SystemColors.Control;
-            this.City.Location = new System.Drawing.Point(596, 42);
-            this.City.Name = "City";
-            this.City.Size = new System.Drawing.Size(74, 22);
-            this.City.TabIndex = 17;
-            this.City.Text = "Location";
             // 
             // labDate
             // 
@@ -539,7 +528,6 @@ namespace WeatherApp
             this.Controls.Add(this.labDate);
             this.Controls.Add(this.labSunset);
             this.Controls.Add(this.labTempararue);
-            this.Controls.Add(this.City);
             this.Controls.Add(this.picIcon);
             this.Controls.Add(this.labPressure);
             this.Controls.Add(this.labWindSpeed);
@@ -572,7 +560,6 @@ namespace WeatherApp
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox picIcon;
-        private System.Windows.Forms.Label City;
         private System.Windows.Forms.Label labDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;

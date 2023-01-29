@@ -39,7 +39,7 @@ namespace WeatherApp
                 picIcon.ImageLocation = string.Format("https://api.openweathermap.org/img/w/{0}.png",Info.weather[0].icon);
 
                 //fetching the condition
-                labTempararue.Text = Info.main.temp.ToString();
+                labTempararue.Text = KelvinValueCOnversion(Info.main.temp).ToString();
 
                 //fetching the details
                 labDetails.Text = Info.weather[0].description;
